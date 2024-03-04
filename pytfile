@@ -65,9 +65,6 @@ text.update_idletasks()
 def close():
 
 main.destroy()
-
- 
-
 font = ('times', 16, 'bold')
 
 title = Label(main, text='Alzheimer Brain Tumor Detection using VGG16 & 19 
