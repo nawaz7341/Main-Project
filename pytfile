@@ -63,90 +63,48 @@ text.insert(END,"80% images are used to train VGG16 & 19 : "+str(X_train.shape[0
 text.insert(END,"20% images are used to test : "+str(X_test.shape[0])+"\n")
 text.update_idletasks()
 def close():
-
 main.destroy()
 font = ('times', 16, 'bold')
-
 title = Label(main, text='Alzheimer Brain Tumor Detection using VGG16 & 19 
-
 Algorithms',anchor=W, justify=CENTER)
-
 title.config(bg='#3A3B3C', fg='white') 
-
 title.config(font=font) 
-
 title.config(height=3, width=120) 
-
 title.place(x=0,y=5)
-
 font1 = ('times', 13, 'bold')
-
 upload = Button(main, text="Upload Dicom Alzheimer Brain Dataset", command=uploadDataset, 
-
 bg='#3A3B3C', fg='white')
-
 upload.place(x=50,y=100)
-
 upload.config(font=font1) 
-
 pathlabel = Label(main)
-
 pathlabel.config(bg='#3A3B3C', fg='white') 
-
 pathlabel.config(font=font1) 
-
 pathlabel.place(x=50,y=150)
-
 processButton = Button(main, text="Preprocess Dataset", command=processDataset, bg='#3A3B3C', 
-
 fg='white')
-
 processButton.place(x=50,y=200)
-
 processButton.config(font=font1)
 trainvggButton = Button(main, text="Train VGG16 Algorithm", command=trainVGG16, 
-
 bg='#3A3B3C', fg='white')
-
 trainvggButton.place(x=50,y=250)
-
 trainvggButton.config(font=font1)
-
 vggButton = Button(main, text="Train VGG19 Algorithm", command=trainVGG19, bg='#3A3B3C', 
-
 fg='white')
-
 vggButton.place(x=50,y=300)
-
 vggButton.config(font=font1)
-
 graphButton = Button(main, text="Comparison Graph", command=graph, bg='#3A3B3C', fg='white')
-
 graphButton.place(x=50,y=350)
-
 graphButton.config(font=font1)
-
 predictButton = Button(main, text="AD BT NB Detection", command=predictTumor, 
-
 bg='#3A3B3C', fg='white')
-
 predictButton.place(x=50,y=400)
-
 predictButton.config(font=font1)
-
 font1 = ('times', 12, 'bold')
-
 text=Text(main,height=25,width=78)
-
 scroll=Scrollbar(text)
-
 text.configure(yscrollcommand=scroll.set)
-
 text.place(x=370,y=100)
-
 text.config(font=font1)
-
 main.config(bg='black')
-
 main.mainloop()
 
